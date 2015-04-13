@@ -5,16 +5,69 @@
   <id>http://blog.url.com/journal</id>
   <link href="http://blog.url.com/journal"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2011-12-31T19:00:00-05:00</updated>
+  <updated>2015-04-09T20:00:00-04:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>from-the-commandline</title>
+    <link rel="alternate" href="http://blog.url.com/journal/2015/04/10/from-the-commandline.html"/>
+    <id>http://blog.url.com/journal/2015/04/10/from-the-commandline.html</id>
+    <published>2015-04-09T20:00:00-04:00</published>
+    <updated>2015-04-12T16:42:38-04:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Well, that worked as expected. Nice!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Code Syntax Highlighting</title>
+    <link rel="alternate" href="http://blog.url.com/journal/2015/04/10/code-syntax-highlighting.html"/>
+    <id>http://blog.url.com/journal/2015/04/10/code-syntax-highlighting.html</id>
+    <published>2015-04-09T20:00:00-04:00</published>
+    <updated>2015-04-12T15:50:15-04:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;CodePen embed:&lt;/p&gt;
+
+&lt;p data-height="268" data-theme-id="0" data-slug-hash="BgrIs" data-default-tab="result" data-user="angeliquejw" class="codepen"&gt;See the Pen &lt;a href="http://codepen.io/angeliquejw/pen/BgrIs/"&gt;Palette Viewer and Tint Generator&lt;/a&gt; by Angelique (&lt;a href="http://codepen.io/angeliquejw"&gt;@angeliquejw&lt;/a&gt;) on &lt;a href="http://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async="" src="//assets.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;
+
+&lt;pre&gt;&lt;code class="language-scss"&gt;// Layout //
+* {     @include box-sizing(border-box); }
+.container {
+    width:70%;
+    margin:0 auto; }
+.row div {
+    float:left;
+    &amp;amp;:last-child { float:right; }
+  min-height:100px;
+  padding:12px 0 0;
+  width:12.5%;
+  &amp;amp;.main { width:25%; } }
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  <entry>
+    <title>First Test</title>
+    <link rel="alternate" href="http://blog.url.com/journal/2015/04/10/first-test.html"/>
+    <id>http://blog.url.com/journal/2015/04/10/first-test.html</id>
+    <published>2015-04-09T20:00:00-04:00</published>
+    <updated>2015-04-12T15:48:55-04:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Example Article</title>
     <link rel="alternate" href="http://blog.url.com/journal/2012/01/01/example-article.html"/>
     <id>http://blog.url.com/journal/2012/01/01/example-article.html</id>
     <published>2011-12-31T19:00:00-05:00</published>
-    <updated>2015-04-13T00:07:38-04:00</updated>
+    <updated>2015-04-11T21:24:01-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
