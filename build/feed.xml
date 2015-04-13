@@ -35,19 +35,31 @@
 &lt;p data-height="268" data-theme-id="0" data-slug-hash="BgrIs" data-default-tab="result" data-user="angeliquejw" class="codepen"&gt;See the Pen &lt;a href="http://codepen.io/angeliquejw/pen/BgrIs/"&gt;Palette Viewer and Tint Generator&lt;/a&gt; by Angelique (&lt;a href="http://codepen.io/angeliquejw"&gt;@angeliquejw&lt;/a&gt;) on &lt;a href="http://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async="" src="//assets.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;
 
-&lt;pre&gt;&lt;code class="language-scss"&gt;// Layout //
-* {     @include box-sizing(border-box); }
-.container {
-    width:70%;
-    margin:0 auto; }
-.row div {
-    float:left;
-    &amp;amp;:last-child { float:right; }
-  min-height:100px;
-  padding:12px 0 0;
-  width:12.5%;
-  &amp;amp;.main { width:25%; } }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="highlight scss"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;&lt;span class="c1"&gt;// Layout //
+&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;     &lt;span class="k"&gt;@include&lt;/span&gt; &lt;span class="nd"&gt;box-sizing&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;border-box&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nc"&gt;.container&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;width&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="m"&gt;70%&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nl"&gt;margin&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="nb"&gt;auto&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nc"&gt;.row&lt;/span&gt; &lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nt"&gt;float&lt;/span&gt;&lt;span class="nd"&gt;:left&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nd"&gt;:last-child&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nt"&gt;float&lt;/span&gt;&lt;span class="nd"&gt;:right&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="nl"&gt;min-height&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="m"&gt;100px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nl"&gt;padding&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="m"&gt;12px&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nl"&gt;width&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="m"&gt;12&lt;/span&gt;&lt;span class="mi"&gt;.5%&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nc"&gt;.main&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nl"&gt;width&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="m"&gt;25%&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
 </content>
   </entry>
   <entry>
