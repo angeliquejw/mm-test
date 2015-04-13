@@ -1,0 +1,24 @@
+
+<aside>
+	<img src="http://placekitten.com/g/300/300" alt="">
+	<p>Ang&eacute;lique Weger is a senior front-end developer at Detroit Trading and co-organizer of the Baltimore chapter of Girl Develop It. She splits her time between those two cities and her energy between crafting clean, effective code and teaching others to do the same. Strike up a conversation with her about the command line, comic books, Sass and/or sharks.</p>
+	<ul class="socialWrapper">
+		<li><a href="#">Twitter</a></li>
+		<li><a href="#">LinkedIn</a></li>
+		<li><a href="#">Git Hub</a></li>
+		<li><a href="#">Email</a></li>
+	</ul>
+	<div class="searchWrapper">
+		<span class="siteSprite iconSearch"></span>
+		<input type="text">
+	</div>
+	<ul class="tagCloudWrapper">
+        <% blog.tags.each do |tag, articles| %>
+          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+        <% end %>
+	</ul>
+	<div class="hidden gdiWrapper">
+		<!-- Eventually would like to include widget of Bmore GDI classes here -->
+		<!-- Include: GDI logo, Want to be a dev, too? headline, class widget and link to national site for those outside of Bmore -->
+	</div>
+</aside>
