@@ -1,0 +1,89 @@
+@import 'webfonts';
+
+body {
+	font-family:aleoregular, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal;
+}
+
+.siteHeader, .code {
+	font-family:bpmonoregular, monospace;
+}
+
+.siteHeader {
+	a {
+		color:$green;
+		&:visited, &:hover, &:active, &:focus {
+			color:$green;
+		}
+	}
+	h1 {
+		@include scut-rem-fallback(24);
+		margin-bottom:36px;
+		text-transform: uppercase;
+	}
+	span {
+		-webkit-animation: blink 1500ms steps(5, start) infinite;
+		animation: blink 1500ms steps(5, start) infinite;
+		margin-left:1px;
+	}
+	@keyframes blink {
+		to {
+			visibility: hidden;
+		}
+	}
+	@-webkit-keyframes blink {
+		to {
+			visibility: hidden;
+		}
+	}
+}
+
+article, main {
+	padding:36px 42px;
+	margin-bottom:18px;
+	a {
+		color:$blue;
+		&:hover, &:active, &:focus {
+			color:lighten($blue, 20%);
+		}
+	}
+}
+
+.articleHeadline {
+	font-family:aleobold, serif;
+	@include scut-rem-fallback(22);
+	margin:0 0 28px;
+}
+
+.articleContent {
+	h2, h3, h4, h5, h6 {
+		font-family:aleobold, serif;
+	}
+	h2 {
+		margin:22px 0 12px;
+	}
+	h3 {
+		margin:16px 0 10px;
+	}
+	h4 {
+		margin:14px 0 8px;
+	}
+	h5 {
+		margin:12px 0 8px;
+	}
+	h6 {
+		margin:10px 0 8px;
+	}
+}
+
+aside, .siteFooter {
+	a {
+		color:$greenli;
+			&:hover, &:active, &:focus {
+				color:$green;
+			}
+	}
+}

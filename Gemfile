@@ -6,6 +6,12 @@ gem "middleman", "~> 3.3.10"
 gem "middleman-blog", "~> 3.5.3"
 gem "middleman-deploy", :git => 'https://github.com/whitetrefoil/middleman-deploy.git'
 
+# Include Bourbon
+gem "bourbon"
+
+# Adding code syntax highlighting
+gem "middleman-syntax"
+
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 

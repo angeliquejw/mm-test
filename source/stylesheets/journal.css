@@ -1,0 +1,341 @@
+/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
+/*
+ * Normalization
+ */
+:root {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: scroll;
+  text-size-adjust: 100%; }
+
+audio:not([controls]) {
+  display: none; }
+
+details {
+  display: block; }
+
+input[type="number"] {
+  width: auto; }
+input[type="search"] {
+  -webkit-appearance: textfield; }
+  input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+main {
+  display: block; }
+
+summary {
+  display: block; }
+
+pre {
+  overflow: auto; }
+
+progress {
+  display: inline-block; }
+
+small {
+  font-size: 75%; }
+
+template {
+  display: none; }
+
+textarea {
+  overflow: auto; }
+
+[hidden] {
+  display: none; }
+
+[unselectable] {
+  user-select: none; }
+
+/*
+ * Universal inheritance
+ */
+*,
+::before,
+::after {
+  box-sizing: inherit; }
+
+* {
+  font-size: inherit;
+  line-height: inherit; }
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit; }
+
+/*
+ * Opinionated defaults
+ */
+*,
+::before,
+::after {
+  border-style: solid;
+  border-width: 0; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+:root {
+  box-sizing: border-box;
+  cursor: default;
+  font: 16px/1.5 sans-serif;
+  text-rendering: optimizeLegibility; }
+
+a {
+  text-decoration: none; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent; }
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
+button,
+input,
+select,
+textarea {
+  min-height: 1.5em; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; }
+
+nav ol,
+nav ul {
+  list-style: none; }
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+  select::-ms-expand {
+    display: none; }
+  select::-ms-value {
+    color: currentColor; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+textarea {
+  resize: vertical; }
+
+::selection {
+  background-color: #B3D4FC;
+  text-shadow: none; }
+
+@media screen {
+  [hidden~="screen"] {
+    display: inherit; }
+
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    clip: rect(0 0 0 0) !important;
+    position: absolute !important; } }
+.container {
+  margin: 0 auto;
+  padding: 50px 80px;
+  position: relative; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.fullWidth {
+  width: 100% !important; }
+
+.halfWidth {
+  display: inline-block;
+  vertical-align: top;
+  width: 49.5%; }
+
+.alignLeft {
+  text-align: left; }
+
+.alignRight {
+  text-align: right; }
+
+.alignCenter {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  text-align: center; }
+
+.hidden {
+  display: none;
+  visibility: none; }
+
+.inlineElement {
+  display: inline !important; }
+
+.wrapperInline {
+  width: 100%; }
+  .wrapperInline .elementWrapper, .wrapperInline .element {
+    display: inline-block;
+    margin-right: 10px; }
+    .wrapperInline .elementWrapper:last-of-type, .wrapperInline .element:last-of-type {
+      margin-right: 0; }
+
+.wrapperFlex {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+  .wrapperFlex .elementWrapper, .wrapperFlex .element {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    margin-right: 10px; }
+  .no-flexbox .wrapperFlex {
+    display: block; }
+    .no-flexbox .wrapperFlex .elementWrapper, .no-flexbox .wrapperFlex .element {
+      display: inline-block;
+      width: auto; }
+
+html {
+  background: #30383D; }
+
+body {
+  background: url(img/bgnoise_lg.40.png); }
+
+article, main {
+  background: #D4E744; }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.1.2
+* Docs at http://davidtheclark.github.io/scut
+*/
+@font-face {
+  font-family: "bpmonoregular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../webfonts/BPmono-webfont.eot");
+  src: url("../webfonts/BPmono-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/BPmono-webfont.woff2") format("woff2"), url("../webfonts/BPmono-webfont.woff") format("woff"), url("../webfonts/BPmono-webfont.ttf") format("truetype"), url("../webfonts/BPmono-webfont.svg#bpmonoregular") format("svg"); }
+@font-face {
+  font-family: "aleobold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../webfonts/Aleo-Bold-webfont.eot");
+  src: url("../webfonts/Aleo-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/Aleo-Bold-webfont.woff2") format("woff2"), url("../webfonts/Aleo-Bold-webfont.woff") format("woff"), url("../webfonts/Aleo-Bold-webfont.ttf") format("truetype"), url("../webfonts/Aleo-Bold-webfont.svg#aleobold") format("svg"); }
+@font-face {
+  font-family: "aleobolditalic";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../webfonts/Aleo-BoldItalic-webfont.eot");
+  src: url("../webfonts/Aleo-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/Aleo-BoldItalic-webfont.woff2") format("woff2"), url("../webfonts/Aleo-BoldItalic-webfont.woff") format("woff"), url("../webfonts/Aleo-BoldItalic-webfont.ttf") format("truetype"), url("../webfonts/Aleo-BoldItalic-webfont.svg#aleobolditalic") format("svg"); }
+@font-face {
+  font-family: "aleoitalic";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../webfonts/Aleo-Italic-webfont.eot");
+  src: url("../webfonts/Aleo-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/Aleo-Italic-webfont.woff2") format("woff2"), url("../webfonts/Aleo-Italic-webfont.woff") format("woff"), url("../webfonts/Aleo-Italic-webfont.ttf") format("truetype"), url("../webfonts/Aleo-Italic-webfont.svg#aleoitalic") format("svg"); }
+@font-face {
+  font-family: "aleolight";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../webfonts/Aleo-Light-webfont.eot");
+  src: url("../webfonts/Aleo-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/Aleo-Light-webfont.woff2") format("woff2"), url("../webfonts/Aleo-Light-webfont.woff") format("woff"), url("../webfonts/Aleo-Light-webfont.ttf") format("truetype"), url("../webfonts/Aleo-Light-webfont.svg#aleolight") format("svg"); }
+@font-face {
+  font-family: "aleolightitalic";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../webfonts/Aleo-LightItalic-webfont.eot");
+  src: url("../webfonts/Aleo-LightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/Aleo-LightItalic-webfont.woff2") format("woff2"), url("../webfonts/Aleo-LightItalic-webfont.woff") format("woff"), url("../webfonts/Aleo-LightItalic-webfont.ttf") format("truetype"), url("../webfonts/Aleo-LightItalic-webfont.svg#aleolightitalic") format("svg"); }
+@font-face {
+  font-family: "aleoregular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../webfonts/Aleo-Regular-webfont.eot");
+  src: url("../webfonts/Aleo-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/Aleo-Regular-webfont.woff2") format("woff2"), url("../webfonts/Aleo-Regular-webfont.woff") format("woff"), url("../webfonts/Aleo-Regular-webfont.ttf") format("truetype"), url("../webfonts/Aleo-Regular-webfont.svg#aleoregular") format("svg"); }
+body {
+  font-family: aleoregular, serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+.siteHeader, .code {
+  font-family: bpmonoregular, monospace; }
+
+.siteHeader a {
+  color: #B0E40C; }
+  .siteHeader a:visited, .siteHeader a:hover, .siteHeader a:active, .siteHeader a:focus {
+    color: #B0E40C; }
+.siteHeader h1 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin-bottom: 36px;
+  text-transform: uppercase; }
+.siteHeader span {
+  -webkit-animation: blink 1500ms steps(5, start) infinite;
+  animation: blink 1500ms steps(5, start) infinite;
+  margin-left: 1px; }
+@keyframes blink {
+  to {
+    visibility: hidden; } }
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden; } }
+article, main {
+  padding: 36px 42px;
+  margin-bottom: 18px; }
+  article a, main a {
+    color: #305061; }
+    article a:hover, article a:active, article a:focus, main a:hover, main a:active, main a:focus {
+      color: #5288a5; }
+
+.articleHeadline {
+  font-family: aleobold, serif;
+  font-size: 22px;
+  font-size: 1.375rem;
+  margin: 0 0 28px; }
+
+.articleContent h2, .articleContent h3, .articleContent h4, .articleContent h5, .articleContent h6 {
+  font-family: aleobold, serif; }
+.articleContent h2 {
+  margin: 22px 0 12px; }
+.articleContent h3 {
+  margin: 16px 0 10px; }
+.articleContent h4 {
+  margin: 14px 0 8px; }
+.articleContent h5 {
+  margin: 12px 0 8px; }
+.articleContent h6 {
+  margin: 10px 0 8px; }
+
+aside a, .siteFooter a {
+  color: #D4E744; }
+  aside a:hover, aside a:active, aside a:focus, .siteFooter a:hover, .siteFooter a:active, .siteFooter a:focus {
+    color: #B0E40C; }
+
+/*# sourceMappingURL=journal.css.map */
