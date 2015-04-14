@@ -1,13 +1,6 @@
-@import 'variables', 'zindex';
+@import 'variables', 'libs/scut', 'zindex';
 
 // GENERIC LAYOUT CLASSES
-.container {
-	@include clearfix;
-	margin: 0 auto;
-	padding:50px 80px;
-	position: relative;
-}
-
 .fullWidth {
 	width: 100% !important;
 }
@@ -80,6 +73,91 @@ body {
 	background:url(img/bgnoise_lg.40.png);
 }
 
-article, main {
+.container {
+	@include clearfix;
+	margin: 0 auto;
+	position: relative;
+
+	&.siteWrapper, &.siteFooter {
+		padding:50px 30px;
+		// padding:50px 80px;
+		@media only screen and (min-width:768px) {
+			padding:50px 80px;
+		}
+	}
+
+	article &, section & {
+		padding:36px 42px;
+	}
+}
+
+article, section {
 	background:$greenli;
+	margin-bottom:18px;
+}
+
+@media only screen and (min-width:920px) {
+	.siteWrapper {
+		@include display(flex);
+		@include flex-flow(row wrap);
+		.siteHeader {
+			@include flex(0 0 100%);
+		}
+	}
+	main {
+		// margin-right:3%;
+		@include flex(1 1 50%);
+	}
+	aside {
+		@include flex(0 0 300px);
+		padding-left:36px;
+		
+		img {
+			border-radius:50%;
+			@include size(100% auto);
+		}
+
+		p {
+			margin:36px 0 14px;
+		}
+	}
+}
+
+.articleFooter {
+	border-top:1px solid $greyli;
+	width:100%;
+	ul, li {
+		list-style:none;
+	}
+	.elementWrapper {
+		padding:8px;
+		@media only screen and (min-width:480px) {
+			&:first-child {
+				padding-left:42px;
+			}
+			&:last-child {
+				padding-right:42px;
+			}
+		}
+
+		.metaIntro, .metaInfo {
+			line-height: 1;
+		}
+		.metaIntro {
+			color:$grayli;
+			display:block;
+			@include scut-rem-fallback(11);
+			text-transform: uppercase;
+		}
+		.metaInfo {
+			font-family:bpmonoregular, monospace;
+			@include scut-rem-fallback(16);
+			letter-spacing: -1px;
+		}
+	}
+}
+
+.siteFooter {
+	background:$blue;
+	color:$grayli;
 }

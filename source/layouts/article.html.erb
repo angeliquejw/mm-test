@@ -1,17 +1,27 @@
 <% wrap_layout :layout do %>
 	<article>
-		<h1 class="articleHeadline"><%= current_article.title %></h1>
-		<div class="articleContent">
-			<%= yield %>
+		<div class="container">
+			<h1 class="articleHeadline"><%= current_article.title %></h1>
+			<div class="articleContent">
+				<%= yield %>
+			</div>			
 		</div>
-		<footer class="articleFooter">
-			<div class="tagWrapper">
+		<footer class="articleFooter wrapperFlex">
+			<div class="tagWrapper elementWrapper">
+				<span class="metaIntro">Tagged</span>
+				<ul>
 				<% current_article.tags.each do |tag| %>
-					<%= link_to tag, tag_path(tag) %>
-				<% end %>
+					<li class="metaInfo"><%= link_to tag, tag_path(tag) %></li>
+				<% end %>					
+				</ul>
 			</div>
-			<div class="geolocationWrapper">
-				Written on <%= current_article.date.strftime('%b %e, %Y') %>, in <%= current_article.data.location %>
+			<div class="dateWrapper elementWrapper">
+				<span class="metaIntro">Written on</span>
+				<span class="metaInfo"><%= current_article.date.strftime('%b %e, %Y') %></span>
+			</div>
+			<div class="geolocationWrapper elementWrapper">
+				<span class="metaIntro">While in</span>
+				<span class="metaInfo"><%= current_article.data.location %></span>
 			</div>
 		</footer>
 	</article>

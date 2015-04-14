@@ -8,8 +8,15 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight:normal;
 }
 
-.siteHeader, .code {
+.siteHeader, pre, code {
 	font-family:bpmonoregular, monospace;
+}
+
+code {
+	background:rgba(white,0.4);
+	.highlight & {
+		background:transparent;
+	}
 }
 
 .siteHeader {
@@ -42,8 +49,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 article, main {
-	padding:36px 42px;
-	margin-bottom:18px;
 	a {
 		color:$blue;
 		&:hover, &:active, &:focus {
@@ -76,6 +81,9 @@ article, main {
 	}
 	h6 {
 		margin:10px 0 8px;
+	}
+	p {
+		margin-bottom:14px;
 	}
 }
 

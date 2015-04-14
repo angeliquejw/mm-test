@@ -3,35 +3,45 @@ pageable: true
 per_page: 10
 ---
 <% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
+	<p>Page <%= page_number %> of <%= num_pages %></p>
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
+	<% if prev_page %>
+		<p><%= link_to 'Previous page', prev_page %></p>
+	<% end %>
 <% end %>
 
 <% page_articles.each_with_index do |article, i| %>
-  <article>
-    <h1 class="articleHeadline"><%= link_to article.title, article %></h1>
-    <div class="articleContent">
-      <!-- use article.summary(250) if you have Nokogiri available to show just the first 250 characters -->
-      <%= article.body %>
-    </div>
-    <footer class="articleFooter">
-      <div class="tagWrapper">
-        <% article.tags.each do |tag| %>
-          <%= link_to tag, tag_path(tag) %>
-        <% end %>
-      </div>
-      <div class="geolocationWrapper">
-        Written on <%= article.date.strftime('%b %e, %Y') %>, in <%= article.data.location %>
-      </div>
-    </footer>
-  </article>
+	<article>
+		<div class="container">
+			<h1 class="articleHeadline"><%= link_to article.title, article %></h1>
+			<div class="articleContent">
+				<!-- use article.summary(250) if you have Nokogiri available to show just the first 250 characters -->
+				<%= article.body %>
+			</div>		
+		</div>
+		<footer class="articleFooter wrapperFlex">
+			<div class="tagWrapper elementWrapper">
+				<span class="metaIntro">Tagged</span>
+				<ul>
+				<% article.tags.each do |tag| %>
+					<li class="metaInfo"><%= link_to tag, tag_path(tag) %></li>
+				<% end %>					
+				</ul>
+			</div>
+			<div class="dateWrapper elementWrapper">
+				<span class="metaIntro">Written on</span>
+				<span class="metaInfo"><%= article.date.strftime('%b %e, %Y') %></span>
+			</div>
+			<div class="geolocationWrapper elementWrapper">
+				<span class="metaIntro">While in</span>
+				<span class="metaInfo"><%= article.data.location %></span>
+			</div>
+		</footer>
+	</article>
 <% end %>
 
 <% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
+	<% if next_page %>
+		<p><%= link_to 'Next page', next_page %></p>
+	<% end %>
 <% end %>
