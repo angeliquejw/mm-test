@@ -4,37 +4,48 @@
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <title>Example Article |  Dev Journal | Angelique Weger</title>
-    <link href="../../../../stylesheets/solarizeddark.css" rel="stylesheet" type="text/css" />
     <link href="../../../../stylesheets/journal.css" rel="stylesheet" type="text/css" />
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/journal/feed.xml" />
     <!-- TODO: Add favicon and modernizr -->
   </head>
   <body>
-    
-    <div class="container">
+
+    <div class="container siteWrapper">
       
 <header class="siteHeader">
 	<h1><a href="/mm-test">Dev Journal<span>_</span></a></h1>
 </header>
 
-      	<article>
-		<h1 class="articleHeadline">Example Article</h1>
-		<div class="articleContent">
-			<p>This is an example article. You probably want to delete it and write your own articles!</p>
+      <main class="elementWrapper">
+        	<article>
+		<div class="container">
+			<h1 class="articleHeadline">Example Article</h1>
+			<div class="articleContent">
+				<p>This is an example article. You probably want to delete it and write your own articles!</p>
 
+			</div>			
 		</div>
-		<footer class="articleFooter">
-			<div class="tagWrapper">
-					<a href="../../../tags/example.html">example</a>
+		<footer class="articleFooter wrapperFlex">
+			<div class="tagWrapper elementWrapper">
+				<span class="metaIntro">Tagged</span>
+				<ul>
+					<li class="metaInfo"><a href="../../../tags/example.html">example</a></li>
+				</ul>
 			</div>
-			<div class="geolocationWrapper">
-				Written on Jan  1, 2012, in Baltimore
+			<div class="dateWrapper elementWrapper">
+				<span class="metaIntro">Written on</span>
+				<span class="metaInfo">Jan  1, 2012</span>
+			</div>
+			<div class="geolocationWrapper elementWrapper">
+				<span class="metaIntro">While in</span>
+				<span class="metaInfo">Baltimore</span>
 			</div>
 		</footer>
 	</article>
-
       
-<aside>
+      </main>
+      
+<aside class="elementWrapper">
 	<img src="http://placekitten.com/g/300/300" alt="">
 	<p>Ang&eacute;lique Weger is a senior front-end developer at Detroit Trading and co-organizer of the Baltimore chapter of Girl Develop It. She splits her time between those two cities and her energy between crafting clean, effective code and teaching others to do the same. Strike up a conversation with her about the command line, comic books, Sass and/or sharks.</p>
 	<ul class="socialWrapper">
@@ -60,18 +71,44 @@
 		<!-- Include: GDI logo, Want to be a dev, too? headline, class widget and link to national site for those outside of Bmore -->
 	</div>
 </aside>
-      
-<footer class="siteFooter">
+    </div>
+    
+<footer class="siteFooter container">
 	<p>v0.1 Build info</p>
-	<ul class="legal">
-		<li>Fonts used X. Blog powered by X. Hosted by X.</li>
+	<ul class="legal noList">
+		<li>Fonts used X. Blog powered by Middleman. Hosted by GitHub Pages.</li>
 		<li>A product of too much coffee, ice cream sandwiches and the overconfidence developed in a weekend Rails workshop.</li>
 		<li>&copy; 2015 Ang&eacute;lique Weger</li>
 		<li><a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a></li>
 	</ul>
 	<!-- Eventually add in a twitter widget and list of talks, etc. -->
 </footer>
-    </div>
     
+    
+<!--     <aside>
+      <h2>Recent Articles</h2>
+      <ol>
+          <li><a href="../../../2015/04/10/from-the-commandline.html">from-the-commandline</a> <span>Apr 10</span></li>
+          <li><a href="../../../2015/04/10/code-syntax-highlighting.html">Code Syntax Highlighting</a> <span>Apr 10</span></li>
+          <li><a href="../../../2015/04/10/first-test.html">First Test</a> <span>Apr 10</span></li>
+          <li><a href="example-article.html">Example Article</a> <span>Jan  1</span></li>
+      </ol>
+
+      <h2>Tags</h2>
+      <ol>
+          <li><a href="../../../tags/example.html">example (1)</a></li>
+          <li><a href="../../../tags/scss.html">scss (1)</a></li>
+          <li><a href="../../../tags/code.html">code (1)</a></li>
+          <li><a href="../../../tags/test.html">test (1)</a></li>
+          <li><a href="../../../tags/first.html">first (1)</a></li>
+          <li><a href="../../../tags/woot.html">woot (2)</a></li>
+      </ol>
+
+      <h2>By Year</h2>
+      <ol>
+          <li><a href="../../../2015.html">2015 (3)</a></li>
+          <li><a href="../../../2012.html">2012 (1)</a></li>
+      </ol>
+    </aside> -->
   </body>
 </html>
